@@ -1,0 +1,88 @@
+
+footer {
+    background-color: $col-primary;
+    padding: 47px 0 43px;  
+}
+
+.footer-content {
+    background-color: $col-primary;
+    color: white;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 -15px;
+}
+
+.footer-column {
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin: 0 15px;
+
+    @include mq('md') {
+        flex-basis: calc(50% - 30px);
+    }
+
+    @include mq('xl') {
+        flex-basis: calc(25% - 60px);
+    }
+
+    >h4 {
+        text-transform: uppercase;
+        font-weight: $font-weight--medium;
+        margin: 0;
+        margin-bottom: em(26px, 16px);
+    }
+
+    li {
+        font-size: em(13px);
+        line-height: (22px / 13px);
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: center;
+
+    a {
+        flex-basis: calc(50% - 30px);
+
+        padding: 10px 0;
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+        display: block;
+        height: auto;
+        background-color: $col-secondary;
+        color: white;
+    }
+}
+
+.facebook {
+    &:hover {
+        background-color: #3b5998;
+    }
+}
+
+.twitter {
+    &:hover {
+        background-color: #1da1f2; 
+    }
+}
+
+.linkedin {
+    &:hover {
+        background-color: #0077B5; 
+    }
+    
+}

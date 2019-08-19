@@ -1,0 +1,121 @@
+.navbar {
+    position: relative;
+    background-color: $col-primary;
+
+    color: white;
+
+    display: none;
+    @include mq('lg') {
+        display: block;
+    }
+}
+
+
+.nav-inner {
+    // remove bullet point styling
+    padding-left: 0;    
+    list-style: none;
+    list-style-position: inside;
+
+    display: flex;
+    margin: 0;
+
+    border-left: 1px solid lighten($col-primary, 10%);
+    border-right: 1px solid lighten(black, 10%);
+
+    >li {
+        text-transform: uppercase;
+
+        flex: 1;
+
+        border-right: 1px solid lighten($col-primary, 10%);
+        border-left: 1px solid lighten(black, 10%);
+
+        >a {
+            display: block;
+            padding: 19px 0 18px;
+            color: white;
+            text-align: center;
+
+            font-size: em(18px);
+        }
+    }
+}
+
+
+.nav-item {
+    &:hover {
+        div {
+            display: block;
+        }
+    }
+
+    @each $dep, $col in $col-department {
+		&__#{$dep} {
+
+            i {
+                color: $col;
+            }
+
+            &:hover {
+                background-color: $col;
+                border-color: $col;
+
+                i {
+                    color: white;
+                }
+            }
+
+		}
+	}
+}
+
+.nav-submenu {
+    display: none;
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    ul {
+        display: flex;
+        justify-content: flex-start;
+
+        margin-left: auto;
+        margin-right:auto;
+
+
+        li {
+            border: none;
+
+            a {
+                color: white;
+                font-size: em(13px);
+                line-height: (45px / 13px);
+
+                @include mq('xl') {
+                    font-size: em(16px);
+                    line-height: (45px / 16px);       
+                }
+            }
+
+            &:not(:last-of-type) a::after {
+                content: '-';
+                padding-left: 20px;
+            }
+
+            &:not(:first-of-type) a {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    @each $dep, $col in $col-department {
+		&__#{$dep} {
+
+			background-color: darken($col, $col--dark-percent);
+			border-color: darken($col, $col--dark-percent);
+		}
+	}
+}

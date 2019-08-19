@@ -1,0 +1,1142 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap");
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.15;
+  letter-spacing: 0.4px; }
+
+a {
+  text-decoration: none; }
+
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 400; }
+
+h3, h4, h5, h6 {
+  font-weight: 600; }
+
+h1 {
+  font-size: 3em; }
+
+h2 {
+  font-size: 2.25em; }
+
+h3 {
+  font-size: 1.125em; }
+
+h4 {
+  font-size: 1em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+p {
+  font-size: 1em; }
+
+small {
+  font-size: 0.625em; }
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 0; }
+
+address {
+  font-style: normal; }
+
+/*
+TOP LOGO AREA
+Button text <a>			    = 18px	400
+
+NAVIGATION
+Department name <small> 	= 10px
+Department name <a> 		= 18px*
+Sum-menu <a>			    = 16px	/ (xl-lg) 13px 
+
+CAROUSEL
+Main heading <div .h1>		= 48px 400*
+Subheading			        = 20px
+Button				        = 20px 400
+
+DEPARTEMTN CARDS
+Heading <h2>			    = 18px 400*
+Description <span .p>		= 13px 400
+Button				        = 17px 400
+
+ABOUT NETMATTERS
+Heading <h1>			    = 36px 400*
+Important text <strong>		= 16px 600
+Content <p>			        = 16px
+Button				        = 17px 400
+
+NEWS
+"Latest" heading <span>		= 20px 600*
+tiny "news" link <a>		= 12px 600
+Artical heading <a>		    = 16px 600*
+Artical excerpt <p>		    = 13px
+Button <a>			        = 17px 400
+Author <strong>			    = 14px 600
+Date <div>			        = 14px
+
+FOOTER
+Heading <h4>			    = 16px 400*
+Content <li> <a>		    = 13px
+*/
+.abs-center {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px; }
+  @media (min-width: 770px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1260px) {
+    .container {
+      width: 1200px; } }
+
+.btn {
+  display: inline-block;
+  padding: 0.29412em 0.88235em;
+  text-transform: uppercase;
+  font-size: 1.0625em;
+  line-height: 2.05882;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px solid transparent; }
+  .btn:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+  .btn__web {
+    color: #fff;
+    background-color: #926fb1;
+    border-color: #926fb1; }
+    .btn__web:hover, .btn__web:focus, .btn__web:active {
+      background-color: #79539a;
+      border-color: #79539a; }
+  .btn__it {
+    color: #fff;
+    background-color: #4183d7;
+    border-color: #4183d7; }
+    .btn__it:hover, .btn__it:focus, .btn__it:active {
+      background-color: #286abd;
+      border-color: #286abd; }
+  .btn__telecoms {
+    color: #fff;
+    background-color: #d64541;
+    border-color: #d64541; }
+    .btn__telecoms:hover, .btn__telecoms:focus, .btn__telecoms:active {
+      background-color: #bc2c28;
+      border-color: #bc2c28; }
+  .btn__software {
+    color: #fff;
+    background-color: #67809f;
+    border-color: #67809f; }
+    .btn__software:hover, .btn__software:focus, .btn__software:active {
+      background-color: #526781;
+      border-color: #526781; }
+  .btn__marketing {
+    color: #fff;
+    background-color: #2ecc71;
+    border-color: #2ecc71; }
+    .btn__marketing:hover, .btn__marketing:focus, .btn__marketing:active {
+      background-color: #25a25a;
+      border-color: #25a25a; }
+  .btn__security {
+    color: #fff;
+    background-color: #f62459;
+    border-color: #f62459; }
+    .btn__security:hover, .btn__security:focus, .btn__security:active {
+      background-color: #de093f;
+      border-color: #de093f; }
+  .btn--lg {
+    padding: 0.25em 1em;
+    font-size: 1.25em;
+    line-height: 2.5; }
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+header {
+  padding: 1.25em 0; }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  height: 70px; }
+
+.main-logo {
+  margin-right: auto; }
+  .main-logo > img {
+    display: block;
+    max-width: 100%; }
+
+.btn.btn--support,
+.btn.btn--contact {
+  font-size: 1.125em;
+  line-height: 2.55556; }
+  .btn.btn--support > i,
+  .btn.btn--contact > i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    margin-left: en(-4px, 24px); }
+
+.btn.btn--support {
+  display: none; }
+  @media (min-width: 992px) {
+    .btn.btn--support {
+      display: inline-block; } }
+
+.btn.btn--contact {
+  display: none;
+  margin-left: 1.11111em;
+  color: #fff;
+  background-color: #999aa2;
+  border-color: #999aa2; }
+  .btn.btn--contact:hover, .btn.btn--contact:focus, .btn.btn--contact:active {
+    background-color: #7e808a;
+    border-color: #7e808a; }
+  @media (min-width: 992px) {
+    .btn.btn--contact {
+      display: inline-block; } }
+
+.hamburger-menu {
+  display: block;
+  color: white;
+  background-color: #333645;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0.91667em 1.16667em 0.25em;
+  margin-left: 1.66667em;
+  border-radius: 3px; }
+  .hamburger-menu:hover {
+    background-color: #262834; }
+
+.icon-phone {
+  color: #333645;
+  font-size: 2rem;
+  margin-left: 0.625em;
+  margin-right: 0.9375em; }
+  .icon-phone:hover {
+    color: #262834; }
+  @media (min-width: 770px) {
+    .icon-phone {
+      display: none; } }
+
+.navbar {
+  position: relative;
+  background-color: #333645;
+  color: white;
+  display: none; }
+  @media (min-width: 992px) {
+    .navbar {
+      display: block; } }
+
+.nav-inner {
+  padding-left: 0;
+  list-style: none;
+  list-style-position: inside;
+  display: flex;
+  margin: 0;
+  border-left: 1px solid #494d62;
+  border-right: 1px solid #1a1a1a; }
+  .nav-inner > li {
+    text-transform: uppercase;
+    flex: 1;
+    border-right: 1px solid #494d62;
+    border-left: 1px solid #1a1a1a; }
+    .nav-inner > li > a {
+      display: block;
+      padding: 19px 0 18px;
+      color: white;
+      text-align: center;
+      font-size: 1.125em; }
+
+.nav-item:hover div {
+  display: block; }
+
+.nav-item__web i {
+  color: #926fb1; }
+
+.nav-item__web:hover {
+  background-color: #926fb1;
+  border-color: #926fb1; }
+  .nav-item__web:hover i {
+    color: white; }
+
+.nav-item__it i {
+  color: #4183d7; }
+
+.nav-item__it:hover {
+  background-color: #4183d7;
+  border-color: #4183d7; }
+  .nav-item__it:hover i {
+    color: white; }
+
+.nav-item__telecoms i {
+  color: #d64541; }
+
+.nav-item__telecoms:hover {
+  background-color: #d64541;
+  border-color: #d64541; }
+  .nav-item__telecoms:hover i {
+    color: white; }
+
+.nav-item__software i {
+  color: #67809f; }
+
+.nav-item__software:hover {
+  background-color: #67809f;
+  border-color: #67809f; }
+  .nav-item__software:hover i {
+    color: white; }
+
+.nav-item__marketing i {
+  color: #2ecc71; }
+
+.nav-item__marketing:hover {
+  background-color: #2ecc71;
+  border-color: #2ecc71; }
+  .nav-item__marketing:hover i {
+    color: white; }
+
+.nav-item__security i {
+  color: #f62459; }
+
+.nav-item__security:hover {
+  background-color: #f62459;
+  border-color: #f62459; }
+  .nav-item__security:hover i {
+    color: white; }
+
+.nav-submenu {
+  display: none;
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  width: 100%;
+  z-index: 1; }
+  .nav-submenu ul {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto; }
+    .nav-submenu ul li {
+      border: none; }
+      .nav-submenu ul li a {
+        color: white;
+        font-size: 0.8125em;
+        line-height: 3.46154; }
+        @media (min-width: 1260px) {
+          .nav-submenu ul li a {
+            font-size: 1em;
+            line-height: 2.8125; } }
+      .nav-submenu ul li:not(:last-of-type) a::after {
+        content: '-';
+        padding-left: 20px; }
+      .nav-submenu ul li:not(:first-of-type) a {
+        padding-left: 20px; }
+  .nav-submenu__web {
+    background-color: #79539a;
+    border-color: #79539a; }
+  .nav-submenu__it {
+    background-color: #286abd;
+    border-color: #286abd; }
+  .nav-submenu__telecoms {
+    background-color: #bc2c28;
+    border-color: #bc2c28; }
+  .nav-submenu__software {
+    background-color: #526781;
+    border-color: #526781; }
+  .nav-submenu__marketing {
+    background-color: #25a25a;
+    border-color: #25a25a; }
+  .nav-submenu__security {
+    background-color: #de093f;
+    border-color: #de093f; }
+
+#banner {
+  position: relative;
+  height: calc(100vh - 207px);
+  min-height: 500px;
+  border-top: 1px solid #999999;
+  width: 100%;
+  overflow: hidden; }
+
+.banner-slides {
+  position: relative;
+  height: calc(100vh - 207px);
+  min-height: 500px;
+  width: 100%;
+  overflow: hidden; }
+
+.banner-buttons {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%); }
+  .banner-buttons > a {
+    color: #d6d6d6;
+    padding: 5px;
+    margin: 0 2px;
+    font-size: 44px;
+    position: relative;
+    border-radius: 50%; }
+    .banner-buttons > a:hover {
+      cursor: pointer;
+      color: #869791; }
+
+a.active {
+  color: white; }
+  a.active:hover {
+    color: white; }
+  a.active::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px white solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%, -47%); }
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.slide-img {
+  height: 100%;
+  position: relative; }
+
+.slide-content {
+  color: white;
+  text-align: center; }
+  @media (min-width: 992px) {
+    .slide-content {
+      text-align: left; } }
+  .slide-content > h1 {
+    margin-bottom: 0.52083em; }
+  .slide-content > p {
+    margin: 0 0 1.75em;
+    font-size: 1.25em;
+    line-height: 1.8em; }
+
+.department-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.dep-card {
+  flex-basis: 100%;
+  flex-grow: 1;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 1.875em;
+  margin-top: 1.875em;
+  margin-left: 0.9375em;
+  margin-right: 0.9375em;
+  color: #333645; }
+  @media (min-width: 770px) {
+    .dep-card {
+      flex-basis: calc(50% - 30px); } }
+  @media (min-width: 1260px) {
+    .dep-card:nth-of-type(n+3) {
+      flex-basis: calc(25% - 60px); } }
+  .dep-card > i {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 2.4;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 1.5625em;
+    margin-bottom: 0.68em; }
+  .dep-card > h2 {
+    font-size: 1.125em;
+    font-weight: normal;
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: 0.61111em;
+    padding-bottom: 0.94444em;
+    position: relative; }
+    .dep-card > h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 14px);
+      width: 28px;
+      height: 3px;
+      background-color: #333645; }
+  .dep-card > p {
+    font-size: 0.8125em;
+    line-height: 1.69231;
+    margin-top: 0; }
+  .dep-card > span {
+    margin-top: auto; }
+
+.card__web > i {
+  background-color: #926fb1; }
+
+.card__web:hover {
+  color: white;
+  background-color: #926fb1; }
+  .card__web:hover > i {
+    background-color: white;
+    color: #926fb1; }
+  .card__web:hover > h2::after {
+    background-color: white; }
+  .card__web:hover .btn {
+    color: #926fb1;
+    background-color: white; }
+
+.card__it > i {
+  background-color: #4183d7; }
+
+.card__it:hover {
+  color: white;
+  background-color: #4183d7; }
+  .card__it:hover > i {
+    background-color: white;
+    color: #4183d7; }
+  .card__it:hover > h2::after {
+    background-color: white; }
+  .card__it:hover .btn {
+    color: #4183d7;
+    background-color: white; }
+
+.card__telecoms > i {
+  background-color: #d64541; }
+
+.card__telecoms:hover {
+  color: white;
+  background-color: #d64541; }
+  .card__telecoms:hover > i {
+    background-color: white;
+    color: #d64541; }
+  .card__telecoms:hover > h2::after {
+    background-color: white; }
+  .card__telecoms:hover .btn {
+    color: #d64541;
+    background-color: white; }
+
+.card__software > i {
+  background-color: #67809f; }
+
+.card__software:hover {
+  color: white;
+  background-color: #67809f; }
+  .card__software:hover > i {
+    background-color: white;
+    color: #67809f; }
+  .card__software:hover > h2::after {
+    background-color: white; }
+  .card__software:hover .btn {
+    color: #67809f;
+    background-color: white; }
+
+.card__marketing > i {
+  background-color: #2ecc71; }
+
+.card__marketing:hover {
+  color: white;
+  background-color: #2ecc71; }
+  .card__marketing:hover > i {
+    background-color: white;
+    color: #2ecc71; }
+  .card__marketing:hover > h2::after {
+    background-color: white; }
+  .card__marketing:hover .btn {
+    color: #2ecc71;
+    background-color: white; }
+
+.card__security > i {
+  background-color: #f62459; }
+
+.card__security:hover {
+  color: white;
+  background-color: #f62459; }
+  .card__security:hover > i {
+    background-color: white;
+    color: #f62459; }
+  .card__security:hover > h2::after {
+    background-color: white; }
+  .card__security:hover .btn {
+    color: #f62459;
+    background-color: white; }
+
+.heading-latest {
+  display: inline-block;
+  border-bottom: 5px solid #333645;
+  color: #333645;
+  font-size: 1.25em;
+  font-weight: 600;
+  padding-top: 2em;
+  padding-bottom: 1.75em;
+  margin: 0; }
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px; }
+
+.article {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  flex-basis: 100%;
+  flex-grow: 1; }
+  @media (min-width: 770px) {
+    .article {
+      flex-basis: calc(50% - 30px);
+      margin-top: 0; }
+      .article:last-of-type {
+        display: none; } }
+  @media (min-width: 1260px) {
+    .article {
+      flex-basis: calc((100% /3) - 45px); }
+      .article:last-of-type {
+        display: block; } }
+
+.article-figure {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  position: relative; }
+  .article-figure > a > img {
+    display: block;
+    width: 100%;
+    transition-duration: .2s; }
+    @media (min-width: 992px) {
+      .article-figure > a > img:hover {
+        transform: scale(1.1);
+        opacity: 0.8; } }
+
+.news-link {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+  color: white;
+  padding: 0.41667em 0.83333em; }
+  .news-link:hover {
+    text-decoration: underline; }
+  .news-link__web {
+    background-color: #926fb1; }
+  .news-link__it {
+    background-color: #4183d7; }
+  .news-link__telecoms {
+    background-color: #d64541; }
+  .news-link__software {
+    background-color: #67809f; }
+  .news-link__marketing {
+    background-color: #2ecc71; }
+  .news-link__security {
+    background-color: #f62459; }
+
+.article-content {
+  padding: 1.875em; }
+  .article-content > h4 {
+    margin: 0;
+    margin-bottom: 0.83333em;
+    line-height: 1.33333em; }
+    .article-content > h4 > a:hover {
+      text-decoration: underline; }
+  .article-content > p {
+    font-size: 0.8125em;
+    line-height: 1.69231;
+    color: #666666;
+    margin: 0;
+    margin-bottom: 1.92308em; }
+  .article-content__web > h4 > a {
+    color: #926fb1; }
+  .article-content__it > h4 > a {
+    color: #4183d7; }
+  .article-content__telecoms > h4 > a {
+    color: #d64541; }
+  .article-content__software > h4 > a {
+    color: #67809f; }
+  .article-content__marketing > h4 > a {
+    color: #2ecc71; }
+  .article-content__security > h4 > a {
+    color: #f62459; }
+
+.article-author {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  padding-top: 35px; }
+  .article-author img {
+    border-radius: 50%;
+    margin-right: 20px; }
+
+.article-author-name strong {
+  color: #333645;
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 1.57143; }
+
+.article-author-name small {
+  font-size: 0.875em;
+  color: #666666; }
+
+.about {
+  color: white;
+  background-color: #333645; }
+  @media (min-width: 992px) {
+    .about {
+      background-image: url(/img/branded.png);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: right center; } }
+
+.about-content > h2 {
+  margin-top: -0.16667em;
+  margin-bottom: 0.77778em;
+  line-height: 1.11111;
+  letter-spacing: 0.01111em; }
+
+.about-content p {
+  margin: 0;
+  margin-bottom: 1.5625em;
+  line-height: 1.875; }
+
+.about-content p:first-of-type {
+  font-weight: bold; }
+
+@media (min-width: 1260px) {
+  .about-content {
+    width: 50%; } }
+
+.btn.btn--culture {
+  color: #333645;
+  background-color: white;
+  border-color: white; }
+  .btn.btn--culture:hover, .btn.btn--culture:focus, .btn.btn--culture:active {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6; }
+
+.clients > div {
+  position: relative; }
+
+.hover-img-swap > img:last-of-type {
+  display: none; }
+
+.hover-img-swap:hover > img:first-of-type {
+  display: none; }
+
+.hover-img-swap:hover > img:last-of-type {
+  display: inline; }
+
+.hover-img-swap:hover .clients-box {
+  display: block; }
+
+.clients {
+  display: none;
+  padding-top: 50px; }
+  @media (min-width: 770px) {
+    .clients {
+      display: flex;
+      justify-content: space-between; } }
+  .clients img {
+    height: 45px; }
+    @media (min-width: 992px) {
+      .clients img {
+        height: 60px; } }
+    @media (min-width: 1260px) {
+      .clients img {
+        height: 80px; } }
+
+.clients-box {
+  display: none;
+  position: absolute;
+  background-color: #333645;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  bottom: 150px;
+  width: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; }
+  .clients-box > h3 {
+    font-size: 1.125em;
+    font-weight: 400; }
+    .clients-box > h3::after {
+      content: "";
+      display: block;
+      width: 28px;
+      height: 3px;
+      margin: 0 auto;
+      background-color: #fff;
+      margin-top: 12px; }
+  .clients-box > p {
+    font-size: 0.8125em;
+    line-height: 1.69231; }
+  .clients-box::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 40px 0 40px;
+    border-color: #333645 transparent transparent transparent;
+    z-index: 1; }
+
+footer {
+  background-color: #333645;
+  padding: 47px 0 43px; }
+
+.footer-content {
+  background-color: #333645;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px; }
+
+.footer-column {
+  flex-basis: 100%;
+  flex-grow: 1;
+  margin: 0 15px; }
+  @media (min-width: 770px) {
+    .footer-column {
+      flex-basis: calc(50% - 30px); } }
+  @media (min-width: 1260px) {
+    .footer-column {
+      flex-basis: calc(25% - 60px); } }
+  .footer-column > h4 {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 1.625em; }
+  .footer-column li {
+    font-size: 0.8125em;
+    line-height: 1.69231; }
+  .footer-column a {
+    color: white; }
+    .footer-column a:hover {
+      text-decoration: underline; }
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center; }
+  .social-links a {
+    flex-basis: calc(50% - 30px);
+    padding: 10px 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    display: block;
+    height: auto;
+    background-color: #262834;
+    color: white; }
+
+.facebook:hover {
+  background-color: #3b5998; }
+
+.twitter:hover {
+  background-color: #1da1f2; }
+
+.linkedin:hover {
+  background-color: #0077B5; }
+
+.accreditations {
+  display: none;
+  justify-content: space-around; }
+  @media (min-width: 770px) {
+    .accreditations {
+      display: flex;
+      align-items: flex-start; } }
+
+#cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 3px;
+  background-color: #e6e6e6;
+  color: #262834;
+  padding: 20px;
+  display: none;
+  border: 1px solid #ccc; }
+  #cookie-popup > h3 {
+    margin-top: 0; }
+  #cookie-popup > div {
+    text-align: right; }
+    #cookie-popup > div > a {
+      color: #262834;
+      font-size: 0.8125em; }
+      #cookie-popup > div > a:hover {
+        text-decoration: underline; }
+    #cookie-popup > div > button {
+      margin-left: 15px; }
+      #cookie-popup > div > button:hover {
+        cursor: pointer; }
+
+.main-overlay {
+  position: fixed;
+  z-index: 15;
+  height: 100vh;
+  width: 100vw;
+  visibility: hidden;
+  transition: left .5s, opacity .5s, visibility 0.5s;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  cursor: pointer; }
+
+.main-overlay.is-enabled {
+  left: -275px;
+  visibility: visible;
+  opacity: 0.4; }
+  @media (min-width: 992px) {
+    .main-overlay.is-enabled {
+      left: -350px; } }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow: auto;
+  z-index: 5; }
+
+.main {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+  transition: all .5s; }
+  .main.sidebar-active {
+    left: -275px; }
+    @media (min-width: 992px) {
+      .main.sidebar-active {
+        left: -350px; } }
+
+.main-inner {
+  height: 100%;
+  overflow: auto; }
+
+.sidebar {
+  background-color: #333645;
+  width: 275px; }
+  .sidebar a {
+    color: white; }
+  @media (min-width: 992px) {
+    .sidebar {
+      width: 350px; } }
+
+.sidebar-departments {
+  padding: 21px; }
+  @media (min-width: 992px) {
+    .sidebar-departments {
+      display: none; } }
+
+.sidebar-category__box > .sidebar-heading {
+  margin-top: 20px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  font-size: 1.125em;
+  padding: 1.05556em 0 1em;
+  text-align: center;
+  line-height: 1.44444; }
+  .sidebar-category__box > .sidebar-heading > i {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 1.438rem; }
+  .sidebar-category__box > .sidebar-heading > small {
+    display: block;
+    font-size: 0.55556em; }
+
+.sidebar-category__box > .sidebar-list {
+  margin-top: 1.25em;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1em; }
+  .sidebar-category__box > .sidebar-list li a {
+    padding: 10px;
+    line-height: 23px; }
+
+.sidebar-category__full-width > .sidebar-heading {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  text-align: left;
+  padding: 1.25em;
+  font-size: 1em; }
+
+.sidebar-category__full-width > .sidebar-list a {
+  padding: 1.07143em 1.42857em;
+  font-size: 0.875em;
+  line-height: 1.42857; }
+  .sidebar-category__full-width > .sidebar-list a::before {
+    content: "\00BB";
+    padding-right: 15px; }
+
+.sidebar-category:hover > .sidebar-heading {
+  background-color: rgba(255, 255, 255, 0.05); }
+
+.sidebar-heading {
+  text-transform: uppercase;
+  display: block; }
+
+.icon__web {
+  color: #926fb1; }
+
+.icon__it {
+  color: #4183d7; }
+
+.icon__telecoms {
+  color: #d64541; }
+
+.icon__software {
+  color: #67809f; }
+
+.icon__marketing {
+  color: #2ecc71; }
+
+.icon__security {
+  color: #f62459; }
+
+.sidebar-list {
+  background-color: rgba(0, 0, 0, 0.25); }
+  .sidebar-list > li:not(:first-child) {
+    border-top: 1px solid rgba(0, 0, 0, 0.45); }
+    .sidebar-list > li:not(:first-child) > a {
+      border-top: 1px solid rgba(255, 255, 255, 0.05); }
+  .sidebar-list > li a {
+    text-transform: uppercase;
+    display: block; }
+
+@media (min-width: 992px) {
+  .sidebar-category__support {
+    display: none; } }
+
+/*
+<span class="hamburger hamburger--spin">
+    <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+    </span>
+</span>
+*/
+.hamburger {
+  padding: 0 0;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #fff; }
+
+.hamburger-box {
+  width: 35px;
+  height: 19px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -1.5px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -8px; }
+  .hamburger-inner::after {
+    bottom: -8px; }
+
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*# sourceMappingURL=style.css.map */

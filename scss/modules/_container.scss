@@ -1,0 +1,17 @@
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include mq('md')
+    {
+        width: 750px;
+    }
+
+    @include mq('lg') {
+        width: 970px;
+    }
+
+    @include mq('xl') {
+        width: 1200px;
+    }
+}

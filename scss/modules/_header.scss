@@ -1,0 +1,103 @@
+
+header {
+    padding: em(20px) 0;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.main-logo {
+    margin-right: auto;
+
+    >img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.btn.btn--support,
+.btn.btn--contact {
+
+    font-size: em(18px);
+    line-height: (46px / 18px);
+
+    >i {
+        font-size: rem(24px);
+        vertical-align: middle;
+        margin-right: em(12px, 24px);
+        margin-left: en(-4px, 24px);
+    }
+}
+
+.btn.btn--support {
+    display: none;
+
+    @include mq('lg')
+    {
+        display: inline-block;
+    }
+}
+
+.btn.btn--contact {
+    $col__btn--contact: #999aa2 !default;
+
+    display: none;
+
+    margin-left: em(20px, 18px);
+
+    color: #fff;
+    background-color:  $col__btn--contact;
+    border-color:  $col__btn--contact;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken( $col__btn--contact, $col--dark-percent);
+        border-color: darken( $col__btn--contact, $col--dark-percent);
+    }
+
+    @include mq('lg')
+    {
+        display: inline-block;
+    }
+}
+
+.hamburger-menu {
+    display: block;
+
+    color: white;
+    background-color: $col-primary; 
+
+    font-size: em(12px);
+    text-transform: uppercase;
+    line-height: (18px / 12px);
+    text-align: center;
+
+    padding: em(11px, 12px) em(14px, 12px) em(3px, 12px);
+    margin-left: em(20px, 12px);
+    border-radius: $br--default;
+
+    &:hover {
+        background-color: $col-secondary;
+    }
+}
+
+
+.icon-phone {
+    color: $col-primary;
+
+    font-size: rem(32px);
+    margin-left: em(20px, 32px);
+    margin-right: em(30px, 32px);
+
+    &:hover {
+        color: $col-secondary;
+    }
+
+    @include mq('md') {
+        display: none;
+    }
+}

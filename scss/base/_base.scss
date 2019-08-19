@@ -1,0 +1,114 @@
+@import url($font-url--google);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family--primary; 
+    font-size: $base__font-size;
+    line-height: ($base__line/$base__font-size);
+    letter-spacing: $base__letter-spacing;   
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-weight: $font-weight--medium;
+}
+
+h3, h4, h5, h6 {
+    font-weight: $font-weight--bold;
+}
+
+// Carousel heading
+h1 {
+    font-size: em(48px);
+}
+
+// About Netmatters section heading
+h2 {
+    font-size: em(36px);
+}
+
+// Navigation large department name and department cards headings 
+h3 {
+    font-size: em(18px);    // was 28px
+}
+
+// News article and footer section headings
+h4 {
+    font-size: em(16px);    // was 24px
+}
+
+h5 {
+    font-size: em(20px); 
+}
+
+
+h6 {
+    font-size: em(16px);
+}
+
+// About Netmatters section content
+p {
+    font-size: em(16px);
+}
+
+// Navigation small department name
+small {
+    font-size: em(10px);    // was 13px
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+/*
+TOP LOGO AREA
+Button text <a>			    = 18px	400
+
+NAVIGATION
+Department name <small> 	= 10px
+Department name <a> 		= 18px*
+Sum-menu <a>			    = 16px	/ (xl-lg) 13px 
+
+CAROUSEL
+Main heading <div .h1>		= 48px 400*
+Subheading			        = 20px
+Button				        = 20px 400
+
+DEPARTEMTN CARDS
+Heading <h2>			    = 18px 400*
+Description <span .p>		= 13px 400
+Button				        = 17px 400
+
+ABOUT NETMATTERS
+Heading <h1>			    = 36px 400*
+Important text <strong>		= 16px 600
+Content <p>			        = 16px
+Button				        = 17px 400
+
+NEWS
+"Latest" heading <span>		= 20px 600*
+tiny "news" link <a>		= 12px 600
+Artical heading <a>		    = 16px 600*
+Artical excerpt <p>		    = 13px
+Button <a>			        = 17px 400
+Author <strong>			    = 14px 600
+Date <div>			        = 14px
+
+FOOTER
+Heading <h4>			    = 16px 400*
+Content <li> <a>		    = 13px
+*/

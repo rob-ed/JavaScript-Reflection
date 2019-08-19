@@ -1,0 +1,118 @@
+
+.department-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.dep-card {
+    // flex item properties
+    flex-basis: 100%;
+    flex-grow: 1;
+    box-shadow: 0 3px 35px rgba(0,0,0,0.1);
+
+    @include mq('md') {
+        flex-basis: calc(50% - 30px);
+    }
+
+    @include mq('xl') {
+        &:nth-of-type(n+3) {
+            flex-basis: calc(25% - 60px);
+        }
+    }
+
+    // flex container properties
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    border: 1px solid #ccc;
+    border-radius: $br--default;
+
+    padding: em(30px);
+    margin-top: em(30px);
+
+    margin-left: em(15px);
+    margin-right: em(15px);
+
+    color: $col-text-secondary;
+
+    >i {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        line-height: (60px / 25px);
+        border-radius: 50%;
+        color: white;
+        background-color: black;
+        font-weight: bold;
+        font-size: em(25px);
+        margin-bottom: em(17px, 25px);
+    }
+
+    >h2 {
+        font-size: em(18px);
+        font-weight: normal;
+        text-transform: capitalize;
+        margin-top: 0;
+        margin-bottom: em(11px, 18px);
+        padding-bottom: em(17px, 18px);
+
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 14px);
+            width: 28px;
+            height: 3px;
+            background-color: #333645;
+        }
+    }
+
+    >p {
+        font-size: em(13px);
+        line-height: (22px / 13px);
+        margin-top: 0;
+    }
+
+    // button
+    >span {
+        margin-top: auto;
+    } 
+}
+
+.card {
+    @each $dep, $col in $col-department {
+		&__#{$dep} {
+
+            >i {
+                background-color: $col;
+            }
+
+			&:hover {
+                color: white;
+                background-color: $col;
+
+                >i {
+                    background-color: white;
+                    color: $col;
+                }
+
+                >h2::after {
+                    background-color: white;
+                }
+
+                .btn {
+                    color: $col;
+                    background-color: white;
+                }
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+
+.accreditations {
+    display: none;
+    justify-content: space-around;
+
+    @include mq('md') {
+        display: flex;
+        align-items: flex-start;
+    }
+}

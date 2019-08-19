@@ -1,0 +1,98 @@
+.clients > div {
+  position: relative;
+}
+
+// Swap image on hover
+.hover-img-swap > img:last-of-type {
+  display: none;
+}
+
+.hover-img-swap:hover {
+  > img:first-of-type {
+    display: none;
+  }
+  > img:last-of-type {
+    display: inline;
+  }
+
+  .clients-box {
+      display: block;
+  }
+}
+
+.clients {
+  display: none;
+  padding-top: 50px;
+
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  img {
+    height: 45px;
+
+    @include mq("lg") {
+      height: 60px;
+    }
+    @include mq("xl") {
+      height: 80px;
+    }
+  }
+}
+
+.clients-box {
+    display: none;
+
+  position: absolute;
+  background-color: $col-primary;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 20px;
+
+  bottom: 150px;
+  width: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 2;
+
+  > h3 {
+    font-size: em(18px);
+    font-weight: $font-weight--medium;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 28px;
+      height: 3px;
+      margin: 0 auto;
+      background-color: #fff;
+      margin-top: 12px;
+    }
+  }
+
+  > p {
+    font-size: em(13px);
+    line-height: (22px / 13px);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 40px 0 40px;
+    border-color: $col-primary transparent transparent transparent;
+
+    z-index: 1;
+  }
+}
